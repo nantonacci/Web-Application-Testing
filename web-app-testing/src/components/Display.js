@@ -6,8 +6,10 @@ import React from 'react';
 const Display = () => {
     return(
         <div>
-            <div>Ball count</div>
-            <div>Strike count</div>
+            <div>{ball}</div>
+            <div>{strike}</div>
         </div>
     )
 }
+
+export default Display;
