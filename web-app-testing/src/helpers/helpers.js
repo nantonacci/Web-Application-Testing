@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 
-export function helpers(){
-    const [ball, setBall] = useState(0);
-    const [strike, setStrike] = useState(0);
-    const [hit, setHit] = useState(0);
-    const [foul, setFoul] = useState(0);
 
-
-    if (ball === 4 || strike === 3 || hit){
-        setBall(0)
-        setStrike(0)
-    }
-
-    if (foul && strike <= 1){
-        setStrike(strike + 1)
-    }
+    // export function incrementBall(){
+    //     setBall(ball + 1)
+    //     if (ball === 4){
+    //         setBall(0)
+    //         setStrike(0)
+    //     }
+    // }
     
-}
+    // export function incrementStrike(){
+    //     setStrike(strike + 1)
+    //     if (strike === 3){
+    //         setStrike(0)
+    //         setBall(0)
+    //     }
+    // }
+
+    // export function incrementHit(){
+    //     setHit(hit + 1)
+    // }
+
+    // export function incrementFoul(){
+    //     setFoul(foul + 1)
+    //     if (strike <= 1){
+    //         setStrike(strike + 1)
+    //     }
+    // }

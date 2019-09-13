@@ -4,17 +4,45 @@
 
 import React, { useState } from 'react';
 
-import helpers from '../helpers/helpers.js';
+// import {incrementBall, incrementFoul, incrementHit, incrementStrike} from '../helpers/helpers.js';
 
-const Dashboard = () => {
+const Dashboard = (props) => {
 
+    console.log(props)
 
+     function incrementBall(){
+        props.setBall(props.ball + 1)
+        if (props.ball === 4){
+            props.setBall(0)
+            props.setStrike(0)
+        }
+    }
+    
+     function incrementStrike(){
+        props.setStrike(props.strike + 1)
+        if (props.strike === 3){
+            props.setStrike(0)
+            props.setBall(0)
+        }
+    }
+
+     function incrementHit(){
+        props.setHit(props.hit + 1)
+    }
+
+     function incrementFoul(){
+        props.setFoul(props.foul + 1)
+        if (props.strike <= 1){
+            props.setStrike(props.strike + 1)
+        }
+    }
+    
     return(
         <div>
-            <button onClick={helpers}>Strike</button>
-            <button onClick={helpers}>Ball</button>
-            <button onClick={helpers}>Foul</button>
-            <button onClick={helpers}>Hit</button>
+            <button onClick={incrementStrike}>Strike</button>
+            <button onClick={incrementBall}>Ball</button>
+            <button onClick={incrementFoul}>Foul</button>
+            <button onClick={incrementHit}>Hit</button>
         </div>
     )
 }
