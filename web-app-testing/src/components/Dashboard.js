@@ -10,7 +10,7 @@ const Dashboard = (props) => {
 
      function incrementBall(){
         props.setBall(props.ball + 1)
-        if (props.ball === 4){
+        if (props.ball === 3){
             props.setBall(0)
             props.setStrike(0)
         }
@@ -18,7 +18,7 @@ const Dashboard = (props) => {
     
      function incrementStrike(){
         props.setStrike(props.strike + 1)
-        if (props.strike === 3){
+        if (props.strike === 2){
             props.setStrike(0)
             props.setBall(0)
         }
@@ -26,6 +26,8 @@ const Dashboard = (props) => {
 
      function incrementHit(){
         props.setHit(props.hit + 1)
+        props.setBall(0)
+        props.setStrike(0)
     }
 
      function incrementFoul(){
