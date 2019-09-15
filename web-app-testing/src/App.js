@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1><span role="image" aria-label="baseball">⚾</span> Score-Keeper</h1>
       <Display ball={ball} setBall={setBall} strike={strike} setStrike={setStrike} hit={hit} setHit={setHit} foul={foul} setFoul={setFoul} />
       <Dashboard ball={ball} setBall={setBall} strike={strike} setStrike={setStrike} hit={hit} setHit={setHit} foul={foul} setFoul={setFoul} />
     </div>

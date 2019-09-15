@@ -6,8 +6,9 @@ import React from 'react';
 const Display = (props) => {
     return(
         <div>
-            <div>Ball: {props.ball}</div>
-            <div>Strike: {props.strike}</div>
+            <div className="tracker"><span role="image" aria-label="heavy check mark">✔️</span> Hits: {props.hit}</div>
+            <div className="tracker"><span role="image" aria-label="baseball">⚾</span> Ball: {props.ball}</div>
+            <div className="tracker"><span role="image" aria-label="cross mark">❌</span> Strike: {props.strike}</div>
         </div>
     )
 }
