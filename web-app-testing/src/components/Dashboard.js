@@ -4,8 +4,6 @@
 
 import React, { useState } from 'react';
 
-// import {incrementBall, incrementFoul, incrementHit, incrementStrike} from '../helpers/helpers.js';
-
 const Dashboard = (props) => {
 
     console.log(props)
